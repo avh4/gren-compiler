@@ -38,7 +38,7 @@ Flag dev {
 
 Common gren-common
     if flag(dev)
-        ghc-options: -O0 -Wall
+        ghc-options: -O0 -Wall -Werror=incomplete-patterns
     else
         ghc-options: -O2 -Wall -Werror -threaded "-with-rtsopts=-N"
 
